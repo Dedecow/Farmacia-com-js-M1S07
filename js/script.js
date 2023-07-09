@@ -9,7 +9,7 @@ function cabecalho(logoSrc, logoAlt, opcoesMenu) {
   var elementoCabecalho = new cabecalho(
     "img/icone-pharma.jpeg",
     "Logo da farmácia Devinpharma",
-    ["Opção 1", "Opção 2", "Opção 3", "Opção 4"]
+    ["Opção1", "Opção2", "Opção3", "Opção4"]
   );
   
   var elementoCabecalhoDom = document.querySelector("#elementoHeader");
@@ -36,7 +36,17 @@ function cabecalho(logoSrc, logoAlt, opcoesMenu) {
   
   function criarListaMenu(opcoesMenu) {
     var listaOpcoesMenu = document.createElement("ul");
-  
+
+  function criarElemento(texto) {
+    var novoElemento = document.createElement("p");
+    novoElemento.textContent = texto;
+    return novoElemento;
+  }
+      
+    var novoElemento = criarElemento("Pharmacia DevinHouse");
+    elementoCabecalhoDom.appendChild(novoElemento);
+
+
     opcoesMenu.forEach(function(option) {
       var itemListaElemento = criarItemLista();
       var elementoLink = criarElementoLink(option);
