@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro e Busca de Medicamentos</title>
+</head>
+
+<body>
+  <h1>Cadastro e Busca de Medicamentos</h1>
+
+  <form id="formMedicamento">
+    <div>
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo">
+    </div>
+    <div>
+      <label for="imagemSrc">Imagem URL:</label>
+      <input type="text" id="imagemSrc" name="imagemSrc">
+    </div>
+    <div>
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" name="descricao"></textarea>
+    </div>
+    <div>
+      <label for="valor">Valor:</label>
+      <input type="number" id="valor" name="valor">
+    </div>
+    <div>
+      <label for="dataCadastro">Data de Cadastro:</label>
+      <input type="date" id="dataCadastro" name="dataCadastro">
+    </div>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <h2>Buscar Medicamentos</h2>
+
+  <form id="formBusca">
+    <div>
+      <label for="buscaTitulo">Título:</label>
+      <input type="text" id="buscaTitulo" name="buscaTitulo">
+    </div>
+    <div>
+      <label for="buscaDescricao">Descrição:</label>
+      <input type="text" id="buscaDescricao" name="buscaDescricao">
+    </div>
+    <div>
+      <label for="buscaValor">Valor:</label>
+      <input type="number" id="buscaValor" name="buscaValor">
+    </div>
+    <div>
+      <label for="buscaDataCadastro">Data de Cadastro:</label>
+      <input type="date" id="buscaDataCadastro" name="buscaDataCadastro">
+    </div>
+    <button type="submit">Buscar</button>
+  </form>
+
+  <h2>Lista de Medicamentos</h2>
+
+  <ul id="listaMedicamentos"></ul>
+
+  <h2>Edição de Medicamento</h2>
+
+  <form id="formEdicao" style="display: none;">
+    <div>
+      <label for="edicaoTitulo">Título:</label>
+      <input type="text" id="edicaoTitulo" name="edicaoTitulo">
+    </div>
+    <div>
+      <label for="edicaoImagemSrc">Imagem URL:</label>
+      <input type="text" id="edicaoImagemSrc" name="edicaoImagemSrc">
+    </div>
+    <div>
+      <label for="edicaoDescricao">Descrição:</label>
+      <textarea id="edicaoDescricao" name="edicaoDescricao"></textarea>
+    </div>
+    <div>
+      <label for="edicaoValor">Valor:</label>
+      <input type="number" id="edicaoValor" name="edicaoValor">
+    </div>
+    <div>
+      <label for="edicaoDataCadastro">Data de Cadastro:</label>
+      <input type="date" id="edicaoDataCadastro" name="edicaoDataCadastro">
+    </div>
+    <button type="submit">Gravar</button>
+  </form>
+
+  <script src="criarMedicamento.js"></script>
+  <script src="buscarMedicamento.js"></script>
+  <script src="editarMedicamento.js"></script>
+</body>
+
+</html>
